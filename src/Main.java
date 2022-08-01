@@ -48,9 +48,13 @@ public class Main {
         int MashaSalary = 67760;
         int DenisSalary = 83690;
         int KristinaSalary = 76230;
-        int MashaNewSalary = MashaSalary * 110 / 100;
-        int DenisNewSalary = DenisSalary * 110 / 100;
-        int KristinaNewSalary = KristinaSalary * 110 / 100;
+        int tenPercent = 10;
+        int MashaTenPercent = MashaSalary / tenPercent;
+        int DenisTenPercent = DenisSalary / tenPercent;
+        int KristinaTenPercent = KristinaSalary / tenPercent;
+        int MashaNewSalary = MashaSalary + MashaTenPercent ;
+        int DenisNewSalary = DenisSalary + DenisTenPercent;
+        int KristinaNewSalary = KristinaSalary + KristinaTenPercent;
         int year = 12;
         int MashaYearSalary = MashaSalary * year;
         int DenisYearSalary = DenisSalary * year;

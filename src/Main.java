@@ -21,7 +21,7 @@ public class Main {
         short IceCreamWeight = 100;
         byte eggs = 4;
         short eggWeight = 70;
-        short Milk = 2;
+        short Milk = 200 / 100;
         short MilkWeight = 105;
         int bananasWeight = bananas * bananaWeight;
         int IceCreamsWeight = IceCream * IceCreamWeight;
@@ -35,26 +35,25 @@ public class Main {
 
         int LosingWeightOne = 250;
         int LosingWeightTwo = 500;
-        int Purpose = 7 * 1000;
-        int SumDaysOne = Purpose / LosingWeightOne;
-        int SumDaysTwo = Purpose / LosingWeightTwo;
+        int PurposeKg = 7;
+        int GramVKg = 1000;
+        int PurposeGram = PurposeKg * GramVKg;
+        int SumDaysOne = PurposeGram / LosingWeightOne;
+        int SumDaysTwo = PurposeGram / LosingWeightTwo;
+        int midDays = (SumDaysOne + SumDaysTwo) / 2;
         System.out.println("Если худеть каждый день на 250 грамм, то для похудения на 7 кг потребуется " + SumDaysOne + " дней");
         System.out.println("Если худеть каждый день на 500 грамм, то для похудения на 7 кг потребуется " + SumDaysTwo + " дней");
-        int MiddleLosingWeight = (LosingWeightTwo + LosingWeightOne) / 2;
-        int MiddleDays = Purpose / MiddleLosingWeight;
-        System.out.println("В среднем может понадобиться " + MiddleDays + " дней, чтобы похудеть на 7 кг");
+        System.out.println("В среднем может понадобиться " + midDays + " дней, чтобы похудеть на 7 кг");
 
 
         int MashaSalary = 67760;
         int DenisSalary = 83690;
         int KristinaSalary = 76230;
         int tenPercent = 10;
-        int MashaTenPercent = MashaSalary / tenPercent;
-        int DenisTenPercent = DenisSalary / tenPercent;
-        int KristinaTenPercent = KristinaSalary / tenPercent;
-        int MashaNewSalary = MashaSalary + MashaTenPercent ;
-        int DenisNewSalary = DenisSalary + DenisTenPercent;
-        int KristinaNewSalary = KristinaSalary + KristinaTenPercent;
+        double Percent = tenPercent / (100 * 1.0);
+        int MashaNewSalary = (int) (MashaSalary + (MashaSalary * Percent));
+        int DenisNewSalary = (int) (DenisSalary + (DenisSalary * Percent));
+        int KristinaNewSalary = (int) (KristinaSalary + (KristinaSalary * Percent));
         int year = 12;
         int MashaYearSalary = MashaSalary * year;
         int DenisYearSalary = DenisSalary * year;
